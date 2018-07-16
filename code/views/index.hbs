@@ -1,0 +1,15 @@
+<h1>{{ title }}</h1>
+
+{{!-- <p>{{ properties.result[1] }}</p> --}}
+{{!-- <p>{{ var obj = JSON.stringify(properties) }}</p> --}}
+
+{{!-- Use JSON to pass the data field into a javascript object --}}
+
+<h3>Get request</h3>
+
+<form action="/submit" method="post">
+    <input class="searchTxt" type="text" placeholder="Enter Property Address..." name="lotplan">
+    <button class="searchBtn" type="submit">Search</i></button>
+</form>
+
+<p>Address passed: {{ output }}</p>
