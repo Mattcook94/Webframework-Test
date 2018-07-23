@@ -1,15 +1,26 @@
 <h1>{{ title }}</h1>
 
-{{!-- <p>{{ properties.result[1] }}</p> --}}
-{{!-- <p>{{ var obj = JSON.stringify(properties) }}</p> --}}
-
-{{!-- Use JSON to pass the data field into a javascript object --}}
-
 <h3>Get request</h3>
 
-<form action="/submit" method="post">
-    <input class="searchTxt" type="text" placeholder="Enter Property Address..." name="lotplan">
-    <button class="searchBtn" type="submit">Search</i></button>
+<form action="/searchlotplan" method="get">
+    <input class="form-control" type="text" placeholder="Enter lotplan..." name="q">
+    <input class="btn btn-default" type="submit" name="input" value="SearchLotPlan">
 </form>
 
-<p>Address passed: {{ output }}</p>
+<p>LOT returned: {{ lot }}</p>
+<p>LOT AREA returned: {{ lot_area }}</p>
+<p>LOCALITY returned: {{ locality }}</p>
+<p>POLYGON returned: {{ wkt }}</p>
+
+<br></br>
+<form action="/searchaddress" method="get">
+    <input class="form-control" type="text" placeholder="Enter Property Address..." name="address">
+    <input class="btn btn-default" type="submit" name="input" value="SearchAddress">
+</form>
+
+<p>ADDRESS returned: {{ address }}</p>
+<p>CITY_PLACE returned: {{ cityplace }}</p>
+<p>STATE returned: {{ state }}</p>
+<p>LOTPLAN returned: {{ lotplan }}</p>
+<p>WKT returned: {{ wkt2 }}</p>
+<p>LOT_AREA returned: {{ lot_area }}</p>
